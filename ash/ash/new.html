@@ -1,0 +1,48 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Stencil Art Gallery</title>
+    <link rel="stylesheet" href="styles.css">
+</head>
+<body>
+    <div class="gallery">
+        <h1>Stencil Art Gallery</h1>
+        <div class="art-grid">
+            <!-- Art pieces -->
+            <div class="art-piece" onclick="selectArt('art1.jpg')">
+                <img src="art1.jpg" alt="Art 1">
+                <p>Art 1</p>
+            </div>
+            <div class="art-piece" onclick="selectArt('art2.jpg')">
+                <img src="art2.jpg" alt="Art 2">
+                <p>Art 2</p>
+            </div>
+            <div class="art-piece" onclick="selectArt('art3.jpg')">
+                <img src="art3.jpg" alt="Art 3">
+                <p>Art 3</p>
+            </div>
+        </div>
+    </div>
+
+    <div id="emailModal" class="modal">
+        <div class="modal-content">
+            <span class="close" onclick="closeModal()">&times;</span>
+            <h2>Send Art via Email</h2>
+            <img id="selectedArt" src="" alt="Selected Art">
+            <form id="emailForm">
+                <label for="email">Recipient's Email:</label>
+                <input type="email" id="email" name="email" required>
+
+                <label for="message">Message:</label>
+                <textarea id="message" name="message" required></textarea>
+
+                <button type="button" onclick="sendEmail()">Send Email</button>
+            </form>
+        </div>
+    </div>
+
+    <script src="script.js"></script>
+</body>
+</html>
